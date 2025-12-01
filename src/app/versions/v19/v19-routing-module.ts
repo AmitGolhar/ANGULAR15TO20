@@ -9,8 +9,7 @@ import { ResourceApiDemo } from './features/resource-api-demo/resource-api-demo'
 import { RouteRenderModeDemo } from './features/route-render-mode-demo/route-render-mode-demo';
 import { SSRHybridDemo } from './features/ssr-hybrid-demo/ssr-hybrid-demo';
 import { StandaloneDefaultDemo } from './features/standalone-default-demo/standalone-default-demo';
-import { TimepickerDemo } from './features/timepicker-demo/timepicker-demo';
-import { ZonelessExample } from './features/zoneless-example/zoneless-example';
+ import { ZonelessExample } from './features/zoneless-example/zoneless-example';
 
  
 const routes: Routes = [
@@ -25,7 +24,7 @@ const routes: Routes = [
   { path: 'route-render-mode-demo', component: RouteRenderModeDemo },
   { path: 'ssr-hybrid-demo', component: SSRHybridDemo },
   { path: 'standalone-default-demo', component: StandaloneDefaultDemo },
-  { path: 'timepicker-demo', component: TimepickerDemo },
+  { path: 'timepicker-demo', component: StandaloneDefaultDemo },
   { path: 'zoneless-example', component: ZonelessExample }
 ];
 

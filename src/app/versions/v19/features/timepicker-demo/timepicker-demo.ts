@@ -7,12 +7,17 @@ import { RouterModule } from '@angular/router';
   selector: 'app-standalone-default-demo',
   standalone: true,
   imports: [CommonModule, FormsModule, RouterModule],
-  templateUrl: './standalone-default-demo.html',
-  styleUrl: './standalone-default-demo.scss',
+  templateUrl: './timepicker-demo.html',
+  styleUrl: './timepicker-demo.scss',
 })
 export class StandaloneDefaultDemo {
   // Signal that controls visibility of content
   private _isActive = signal<boolean>(true);
+// Timepicker values
+time = signal('12:00');
+
+hours = Array.from({ length: 24 }, (_, i) => (i < 10 ? '0' + i : '' + i));
+minutes = Array.from({ length: 60 }, (_, i) => (i < 10 ? '0' + i : '' + i));
 
   // Getter/setter for template-friendly access
   get isActive(): boolean { return this._isActive(); }
@@ -71,4 +76,14 @@ export class StandaloneDefaultDemo {
   <li *ngFor="let item of items">{{ item.name }}</li>
 </ul>
 `.trim();
+
+
+
+get timeValue(): string {
+  return this.time();
+}
+set timeValue(val: string) {
+  this.time.set(val);
+}
+
 }

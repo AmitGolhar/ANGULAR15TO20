@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimepickerDemo } from './timepicker-demo';
-
+ 
 describe('TimepickerDemo', () => {
   let component: TimepickerDemo;
   let fixture: ComponentFixture<TimepickerDemo>;
