@@ -1,0 +1,20 @@
+<div class="incremental-hydration-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Incremental Hydration Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="increment()">Increment Hydrated Counter</button>
+      <p>Current hydrated counter: {{ hydratedCounter }}</p>
+    </div>
+  </section>
+
+</div>

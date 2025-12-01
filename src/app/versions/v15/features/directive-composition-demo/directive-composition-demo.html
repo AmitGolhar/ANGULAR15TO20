@@ -1,0 +1,20 @@
+<div class="directive-demo page">
+
+  <h2 class="title">Directive Composition API (Angular 15–20)</h2>
+
+  <div *ngFor="let block of theoryBlocks" class="theory-section">
+    <h3>{{ block.title }}</h3>
+    <div [innerHTML]="block.content"></div>
+  </div>
+
+  <section class="theory-section">
+    <h3>Directive Example</h3>
+    <pre><code>{{ codeExamples.directiveDefinitions }}</code></pre>
+  </section>
+
+  <section class="theory-section">
+    <h3>Component Using hostDirectives</h3>
+    <pre><code>{{ codeExamples.componentUsingHostDirectives }}</code></pre>
+  </section>
+
+</div>

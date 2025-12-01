@@ -1,0 +1,31 @@
+.demo-wrapper {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.title {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.theory-block {
+  background: rgba(0,0,0,0.04);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.code-section {
+  margin: 1.5rem 0;
+
+  pre {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 14px;
+  }
+}

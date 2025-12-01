@@ -1,0 +1,82 @@
+/* demo-theory SCSS — apply to your theory-notes + demo + code container */
+
+.theory-section,
+.demo-container {
+  // common container styling
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  color: #333;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.theory-section h3,
+.demo-container h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.theory-section ul {
+  list-style: disc outside;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.theory-section ul li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* Style for code snippet blocks */
+pre, code {
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #f8f8f2;
+  background: #2d2d2d;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* if you use <pre><code> for blocks then: */
+pre {
+  margin: 0 0 1.5rem 0;
+}
+
+/* Demo output container (for live UI / images etc.) */
+.demo-output {
+  background: #f9f9f9;
+  border: 1px dashed #bbb;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Optional: styling for images inside demo-output */
+.demo-output img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive adjustments (mobile) */
+@media (max-width: 768px) {
+  .theory-section,
+  .demo-container {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  pre, code {
+    font-size: 0.85rem;
+  }
+}

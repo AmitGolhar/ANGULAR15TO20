@@ -1,0 +1,25 @@
+<div class="esbuild-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="theory-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="theory-section mb-4">
+    <h3>Simple Build Script Example (esbuild)</h3>
+    <pre><code>{{ codeExample }}</code></pre>
+  </section>
+
+  <section class="theory-section mb-4">
+    <h3>How to use with Angular CLI</h3>
+    <p>
+      In Angular (v16+), you can switch the build builder to use ESBuild — making builds & rebuilds faster, while keeping full Angular features.
+      :contentReference[oaicite:6]&#123;index=6&#125;
+    </p>
+    <p>
+      This helps especially in demo / playground projects — where you want quick compile-reload and minimal wait time while building many small feature-demos.
+    </p>
+  </section>
+
+</div>

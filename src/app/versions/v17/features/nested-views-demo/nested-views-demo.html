@@ -1,0 +1,34 @@
+<div class="nested-views-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Nested Views Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="nested-preview">
+      <div *ngIf="showHeader">
+        <h2>Header Section</h2>
+      </div>
+
+      <ul>
+        <li *ngFor="let item of items">{{ item }}</li>
+      </ul>
+
+      <div *ngIf="showFooter">
+        <p>Footer Section</p>
+      </div>
+
+      <div class="toggle-buttons">
+        <button (click)="showHeader = !showHeader">Toggle Header</button>
+        <button (click)="showFooter = !showFooter">Toggle Footer</button>
+      </div>
+    </div>
+  </section>
+
+</div>

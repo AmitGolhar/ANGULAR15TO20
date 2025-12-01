@@ -1,0 +1,24 @@
+<div class="zoneless-example page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Zoneless Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="counter.set(counter() + 1)">Increment</button>
+      <button (click)="isVisible.set(!isVisible())">Toggle Visibility</button>
+
+      <div *ngIf="isVisible()">
+        Counter: {{ counter() }}
+      </div>
+    </div>
+  </section>
+
+</div>

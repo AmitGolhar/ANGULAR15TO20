@@ -1,0 +1,15 @@
+<div class="stable-hydration-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Hydration Example</h3>
+    <p *ngIf="hydratedContent(); else loading">{{ hydratedContent() }}</p>
+    <ng-template #loading><p>Hydrating content...</p></ng-template>
+  </section>
+
+</div>

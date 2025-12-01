@@ -1,0 +1,22 @@
+<div class="theme-switcher-demo page" [ngClass]="currentTheme">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Theme Switcher Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="toggleTheme()">
+        Switch to {{ currentTheme === 'light' ? 'Dark' : 'Light' }} Mode
+      </button>
+      <p>Current Theme: {{ currentTheme | titlecase }}</p>
+    </div>
+  </section>
+
+</div>

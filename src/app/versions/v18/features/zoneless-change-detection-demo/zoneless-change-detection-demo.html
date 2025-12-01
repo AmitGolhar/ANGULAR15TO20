@@ -1,0 +1,22 @@
+<div class="zoneless-change-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Zoneless Counter Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="counter.set(counter() + 1)">
+        Increment Counter
+      </button>
+      <p>Counter Value: {{ counter() }}</p>
+    </div>
+  </section>
+
+</div>

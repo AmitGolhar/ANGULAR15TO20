@@ -1,0 +1,35 @@
+.performance-benchmark-demo {
+  padding: 1.5rem;
+
+  .demo-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    h2 { margin: 0; font-size: 1.75rem; font-weight: 600; }
+  }
+
+  .demo-section { margin-bottom: 2rem; }
+  .preview {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label { display: flex; gap: 0.5rem; align-items: center; }
+
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      border: 1px solid #28a745;
+      background-color: #28a745;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button:hover { background-color: #1e7e34; }
+
+    ul { max-height: 150px; overflow-y: auto; padding-left: 1rem; }
+  }
+}
+
+.mb-4 { margin-bottom: 1.5rem; }

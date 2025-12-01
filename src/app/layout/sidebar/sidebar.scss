@@ -1,0 +1,31 @@
+.sidebar-container {
+  width: 260px;
+  min-height: 100vh;
+  background: #1a1a1a;
+  overflow-y: auto;
+}
+
+/* MOBILE HIDDEN BY DEFAULT */
+@media (max-width: 991px) {
+  :host {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    background: #1a1a1a;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+    z-index: 9999;
+  }
+
+  :host.open {
+    transform: translateX(0);   /* 💥 MOBILE OPEN WORKS NOW */
+  }
+}
+
+.active-link {
+  background: #0d6efd;
+  color: white !important;
+  border-radius: 4px;
+}

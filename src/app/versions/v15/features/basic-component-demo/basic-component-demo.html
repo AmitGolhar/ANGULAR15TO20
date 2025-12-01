@@ -1,0 +1,121 @@
+<ng-container>
+  <!-- ========================================= -->
+  <!-- Basic Component Demo — theory notes       -->
+  <!-- ========================================= -->
+  <section class="theory-section">
+    <h3>Basic Component Demo — Why This Matters in Angular 15</h3>
+    <ul>
+      <li>Angular components remain the core building block — templates, class logic, styling stay at the heart of Angular apps.</li>
+      <li>Using basic component demos helps verify that your project setup (TS, build, routing) works correctly after upgrading to Angular 15.</li>
+      <li>If you later migrate to standalone components, this demo serves as a baseline (NgModule-based component behaviour) to compare against.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- CSS Variables Demo — theory notes         -->
+  <!-- ========================================= -->
+  <section class="theory-section">
+    <h3>CSS Variables Demo — Why Use CSS Variables / Custom Properties</h3>
+    <ul>
+      <li>CSS variables (custom properties) let you define theme colors, sizing, spacing etc. globally — this helps in building consistent design themes.</li>
+      <li>When building a component library or a large app, using CSS variables ensures you can switch themes (dark/light, custom palettes) easily without rewriting CSS.</li>
+      <li>Using CSS variables works well with Angular’s component-scoped styles or global styles — giving flexibility without sacrificing isolation.</li>
+      <li>Good practice: define root variables (for example <code>:root &#123; --sidebar-width: 260px; … &#125;</code>) and reference them across components for layout consistency.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Directive Composition Demo — theory notes  -->
+  <!-- ========================================= -->
+  <section class="theory-section">
+    <h3>Directive Composition Demo — What’s New in Angular 15</h3>
+    <ul>
+      <li>Angular 15 introduced the <strong>Directive Composition API</strong> — you can attach standalone directives to a component’s host element via <code>hostDirectives</code>.</li>
+      <li>This enables you to reuse directive behavior (e.g. styling, accessibility, event handling) across components without inheritance or mixins — improving modularity and reuse.</li>
+      <li>Only standalone directives can be used in <code>hostDirectives</code>; they must be imported appropriately.</li>
+      <li>Directive composition reduces boilerplate and simplifies component logic: behavior can be “mixed in” declaratively instead of manually wiring directive logic.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Error / Stacktrace Demo — theory notes     -->
+  <!-- ========================================= -->
+  <section class="theory-section">
+    <h3>Error / Stacktrace Demo — Angular 15 Improvements</h3>
+    <ul>
+      <li>Angular 15 improved debugging by producing cleaner, more readable stack traces — easier to trace errors to your application code than internal framework code.</li>
+      <li>Better stack traces reduce “noise” (less irrelevant internal frames) — helps faster debugging especially in smaller demo / playground apps such as yours.</li>
+      <li>For learning purposes, triggering a sample error (e.g. undefined property access) and inspecting stack trace helps understand how Angular surfaces errors after upgrade.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Build / ESBuild Demo — theory notes         -->
+  <!-- ========================================= -->
+  <section class="theory-section">
+    <h3>Build Demo (ESBuild / Tooling) — What Changed & Why It Matters</h3>
+    <ul>
+      <li>Angular 15 brings improved build tooling and better integration for modern build systems (including support for fast build tools like ESBuild) across the ecosystem.</li>
+      <li>This can lead to faster build times and quicker development iterations — helpful when you have many demo components or frequent rebuilds.</li>
+      <li>Using modern build tools reduces bundle size via tree-shaking and dead-code elimination — useful in production apps, or if you deploy your demo project as a documentation/showcase site.</li>
+      <li>The build demo is conceptual: you might measure before/after build times (or bundle size) to compare — a good learning exercise to understand build pipeline improvements in Angular 15.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Image Directive Demo — theory notes         -->
+  <section class="theory-section">
+    <h3>Image Directive Demo (NgOptimizedImage) — Angular 15 Feature</h3>
+    <ul>
+      <li>Angular 15 stabilized the <code>NgOptimizedImage</code> directive (image-optimization as part of core) — previously experimental.</li>
+      <li>This directive helps load images optimally: generates responsive <code>srcset</code>, lazy-loads non-critical images, sets correct dimensions to avoid layout shift — improving performance and user experience.</li>
+      <li>Using <code>NgOptimizedImage</code> means you don’t need to manually craft <code>srcset</code> or media-queries for images — Angular handles it internally. Very handy for demo and real-world projects alike.</li>
+      <li>Good for performance metrics (LCP, load time, bandwidth) especially when images are large or app used on varied devices — worth including as a demo feature to observe benefits in practice.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Nested Components Demo — theory notes        -->
+  <section class="theory-section">
+    <h3>Nested Components Demo — Core Angular Concept</h3>
+    <ul>
+      <li>Angular’s component-based architecture allows building reusable UI pieces; nested components (parent + child) help organize complex UIs cleanly — fundamental even in Angular 15.</li>
+      <li>Demonstrating nested components helps you learn data binding, @Input / @Output communication, component encapsulation, and composition — key to writing scalable Angular code.</li>
+      <li>Using nested-component demos alongside Angular 15 new features (standalone components, directive composition, etc.) shows how modern features integrate with foundational architecture.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Router-Standalone Demo — theory notes         -->
+  <section class="theory-section">
+    <h3>Router Standalone Demo — Angular 15 Router Improvements</h3>
+    <ul>
+      <li>Angular 15 supports stable standalone components and standalone router APIs — meaning you can build a multi-route application without traditional NgModules.</li>
+      <li>This simplifies application bootstrap and routing setup: no need for NgModule wrappers, less boilerplate, cleaner route definitions.</li>
+      <li>Using router + standalone components together makes lazy-loading easier and the app more modular — good for large apps or demo projects like yours.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Standalone Component Demo — theory notes     -->
+  <section class="theory-section">
+    <h3>Standalone Component Demo — What Changed in Angular 15</h3>
+    <ul>
+      <li>In Angular 15 the Standalone Components / Directives / Pipes API became stable (no longer experimental).</li>
+      <li>Standalone components allow you to define components without requiring NgModules — reducing boilerplate and simplifying project structure.</li>
+      <li>You can bootstrap an app with a single component and import only what is needed (directives, pipes, etc.), making the app more modular and lightweight.</li>
+      <li>This approach is ideal for small components, modular UI libraries, and demo / playground projects — exactly like what you’re building.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- Typed Forms Demo — theory notes             -->
+  <section class="theory-section">
+    <h3>Typed Forms Demo — Angular Forms + Type Safety (Conceptual)</h3>
+    <ul>
+      <li>While Angular 15 itself doesn’t radically change forms API, combining typed forms (with TypeScript features) helps maintain type safety and code robustness — best practice for any Angular project.</li>
+      <li>Using typed forms within standalone or nested components helps build small, testable form components — useful in production and demo contexts.</li>
+      <li>Forms remain core for user input, validation, reactive or template-driven patterns — combining them with Angular 15 features yields modern, clean, modular code.</li>
+    </ul>
+  </section>
+</ng-container>

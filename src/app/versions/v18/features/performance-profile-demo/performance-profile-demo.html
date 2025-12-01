@@ -1,0 +1,25 @@
+<div class="performance-profile-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Performance Profiling Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="runPerformanceTest()">
+        Run Performance Test
+      </button>
+
+      <ul>
+        <li *ngFor="let log of logs">{{ log }}</li>
+      </ul>
+    </div>
+  </section>
+
+</div>

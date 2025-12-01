@@ -1,0 +1,34 @@
+<div class="ssr-hybrid-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>SSR Hybrid Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <label>Select Render Mode:</label>
+      <select [(ngModel)]="mode">
+        <option value="client">Client</option>
+        <option value="server">Server</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+
+      <div *ngIf="mode === 'client'">Client-side rendering active.</div>
+      <div *ngIf="mode === 'server'">Server-side rendering active.</div>
+      <div *ngIf="mode === 'hybrid'">Hybrid SSR + client hydration active.</div>
+
+      <ul>
+        <li *ngFor="let route of routes">
+          <a [routerLink]="route.path">{{ route.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</div>

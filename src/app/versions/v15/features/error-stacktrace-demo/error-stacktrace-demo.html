@@ -1,0 +1,32 @@
+<div class="error-demo page">
+
+  <h2 class="title">Error & Stacktrace Demo (Angular 15–20)</h2>
+
+  <button class="btn" (click)="triggerError()">Trigger Live Error</button>
+
+  <div *ngFor="let block of theoryBlocks" class="theory-section">
+    <h3>{{ block.title }}</h3>
+    <div [innerHTML]="block.content"></div>
+  </div>
+
+  <section class="theory-section">
+    <h3>Demo Component Code</h3>
+    <pre><code>{{ codeExamples.demoComponent }}</code></pre>
+  </section>
+
+  <section class="theory-section">
+    <h3>Global Error Handler (Modern Angular)</h3>
+    <pre><code>{{ codeExamples.globalErrorHandler }}</code></pre>
+  </section>
+
+  <section class="theory-section">
+    <h3>RxJS Error Handling Example</h3>
+    <pre><code>{{ codeExamples.rxjsErrorHandling }}</code></pre>
+  </section>
+
+  <section class="theory-section">
+    <h3>Async/Await Error Handling Example</h3>
+    <pre><code>{{ codeExamples.asyncTryCatch }}</code></pre>
+  </section>
+
+</div>

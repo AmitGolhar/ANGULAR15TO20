@@ -1,0 +1,23 @@
+<div class="resource-api-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Resource API Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <input [(ngModel)]="username" placeholder="Enter GitHub username" />
+      <button (click)="fetchUser()" [disabled]="loading">Fetch User</button>
+
+      <div *ngIf="loading">Loading...</div>
+      <pre *ngIf="response">{{ response }}</pre>
+    </div>
+  </section>
+
+</div>

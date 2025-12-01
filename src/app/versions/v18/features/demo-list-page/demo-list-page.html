@@ -1,0 +1,23 @@
+<div class="demo-list-page page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Demo List Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <ul>
+        <li *ngFor="let demo of demos">
+          <a [routerLink]="demo.route">{{ demo.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="signals-counter-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Signals Counter Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <p>Rendered simulation:</p>
+    <div class="counter-preview">
+      <button (click)="counter.set(counter() - 1)">-</button>
+      <span class="counter-value">{{ counter() }}</span>
+      <button (click)="counter.set(counter() + 1)">+</button>
+    </div>
+  </section>
+
+</div>

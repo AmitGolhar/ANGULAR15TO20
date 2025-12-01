@@ -1,0 +1,17 @@
+<div class="zoneless-mode-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Counter with Zoneless Signals</h3>
+    <p>Counter: {{ counter() }}</p>
+    <p>Last Updated: {{ lastUpdate() | date:'mediumTime' }}</p>
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+  </section>
+
+</div>

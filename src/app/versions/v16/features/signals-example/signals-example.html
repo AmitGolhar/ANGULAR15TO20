@@ -1,0 +1,26 @@
+<div class="signals-example page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Signals Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <p>Rendered simulation:</p>
+    <div class="signals-preview">
+      <div class="counter-controls">
+        <button (click)="decrement()">-</button>
+        <span class="counter-value">{{ count() }}</span>
+        <button (click)="increment()">+</button>
+        <button (click)="reset()">Reset</button>
+      </div>
+      <p>Double Count: <strong>{{ doubleCount() }}</strong></p>
+    </div>
+  </section>
+
+</div>

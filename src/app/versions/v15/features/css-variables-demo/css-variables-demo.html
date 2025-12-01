@@ -1,0 +1,29 @@
+<div class="demo-wrapper">
+
+  <h2 class="title">CSS Variables in Angular (v15 - v20)</h2>
+
+  <div class="theory-block" *ngFor="let block of theoryBlocks">
+    <h3>{{ block.title }}</h3>
+    <div class="content" [innerHTML]="block.content"></div>
+  </div>
+
+  <hr />
+
+  <h3>Example Code Snippets</h3>
+
+  <div class="code-section">
+    <h4>Global Styles (styles.scss)</h4>
+    <pre><code>{{ codeExamples.globalCss }}</code></pre>
+  </div>
+
+  <div class="code-section">
+    <h4>Component HTML</h4>
+    <pre><code>{{ codeExamples.componentHtml }}</code></pre>
+  </div>
+
+  <div class="code-section">
+    <h4>Component SCSS</h4>
+    <pre><code>{{ codeExamples.componentScss }}</code></pre>
+  </div>
+
+</div>

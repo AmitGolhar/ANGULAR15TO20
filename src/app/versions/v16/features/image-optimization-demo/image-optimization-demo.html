@@ -1,0 +1,20 @@
+<div class="image-optimization-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Image Optimization Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <p>Rendered image preview:</p>
+    <div class="image-preview">
+      <img src="assets/sample-image.jpg" alt="Sample" width="300" height="200" loading="lazy"/>
+    </div>
+  </section>
+
+</div>

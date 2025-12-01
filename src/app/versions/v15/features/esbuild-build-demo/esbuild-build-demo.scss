@@ -1,0 +1,56 @@
+.esbuild-demo {
+  padding: 1.5rem;
+
+  .demo-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+
+    h2 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .theory-section {
+    margin-bottom: 2rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+
+      li {
+        margin: 0.3rem 0;
+      }
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #eaeaea;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    code {
+      font-family: Consolas, Monaco, 'Courier New', monospace;
+    }
+  }
+}
+
+/* Optional spacing helpers if missing */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}

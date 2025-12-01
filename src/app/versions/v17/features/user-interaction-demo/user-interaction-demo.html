@@ -1,0 +1,23 @@
+<div class="user-interaction-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>User Interaction Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <input [(ngModel)]="message" placeholder="Type a message" />
+      <button (click)="counter = counter + 1">Increment Counter</button>
+
+      <p>Message: {{ message }}</p>
+      <p>Counter: {{ counter }}</p>
+    </div>
+  </section>
+
+</div>

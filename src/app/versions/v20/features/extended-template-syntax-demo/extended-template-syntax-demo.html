@@ -1,0 +1,32 @@
+<div class="extended-template-syntax-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Extended Template Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <button (click)="showItems.set(!showItems())">
+        Toggle Items
+      </button>
+
+      <div class="form-control">
+        <input [(ngModel)]="newItem" placeholder="Add item" />
+        <button (click)="addItem()">Add</button>
+      </div>
+
+      <div *ngIf="showItems()">
+        <ul>
+          <li *ngFor="let item of items()">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>

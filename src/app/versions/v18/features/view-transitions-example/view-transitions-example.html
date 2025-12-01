@@ -1,0 +1,24 @@
+<div class="view-transitions-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>View Transition Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <div class="view-container" [class.view1]="activeView==='view1'" [class.view2]="activeView==='view2'">
+        <p>{{ activeView === 'view1' ? 'This is View 1' : 'This is View 2' }}</p>
+      </div>
+      <button (click)="activeView = activeView === 'view1' ? 'view2' : 'view1'">
+        Switch View
+      </button>
+    </div>
+  </section>
+
+</div>

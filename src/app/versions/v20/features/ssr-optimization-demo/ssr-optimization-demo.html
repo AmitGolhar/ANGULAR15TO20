@@ -1,0 +1,15 @@
+<div class="ssr-optimization-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Server-Side Rendered Content</h3>
+    <p *ngIf="serverData(); else loading">{{ serverData() }}</p>
+    <ng-template #loading><p>Loading...</p></ng-template>
+  </section>
+
+</div>

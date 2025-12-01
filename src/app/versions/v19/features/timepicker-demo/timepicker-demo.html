@@ -1,0 +1,28 @@
+<div class="timepicker-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Timepicker Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <label>Select Time:</label>
+      <select [(ngModel)]="time">
+        <option *ngFor="let h of hours" [value]="h + ':' + time().split(':')[1]">{{ h }}</option>
+      </select>
+      :
+      <select [(ngModel)]="time">
+        <option *ngFor="let m of minutes" [value]="time().split(':')[0] + ':' + m">{{ m }}</option>
+      </select>
+
+      <p>Selected Time: {{ time() }}</p>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,38 @@
+<nav class="sidebar-container bg-dark text-white p-2">
+
+  <!-- MOBILE CLOSE BUTTON -->
+  <div class="d-lg-none text-end mb-2">
+    <button class="btn btn-outline-light btn-sm" (click)="closeSidebar.emit()">
+      ✕ Close
+    </button>
+  </div>
+
+  <!-- VERSION LIST -->
+  @for (v of versions; track v.key) {
+    <div class="mb-1">
+      <button 
+        class="btn w-100 text-start fw-bold text-white"
+        (click)="toggle(v.key)">
+        {{ v.label }}
+      </button>
+
+      @if (expanded === v.key) {
+        <ul class="list-unstyled ms-3 mt-1">
+          @for (feat of v.features; track feat.path) {
+            <li>
+              <a
+                [routerLink]="['/', v.key, feat.path]"
+                routerLinkActive="active-link"
+                class="d-block px-2 py-1 text-white text-decoration-none"
+                (click)="closeSidebar.emit()"
+              >
+                {{ feat.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+  }
+
+</nav>

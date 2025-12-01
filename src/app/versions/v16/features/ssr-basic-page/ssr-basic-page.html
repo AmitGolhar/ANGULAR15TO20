@@ -1,0 +1,20 @@
+<div class="ssr-basic-page page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>SSR Basic Page Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <p>Rendered simulation:</p>
+    <div class="ssr-preview">
+      <p>This content would be rendered on the server and sent as HTML to the browser.</p>
+    </div>
+  </section>
+
+</div>

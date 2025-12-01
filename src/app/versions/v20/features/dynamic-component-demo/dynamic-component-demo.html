@@ -1,0 +1,30 @@
+<div class="dynamic-component-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Dynamic Component Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <div class="button-group">
+        <button *ngFor="let comp of dynamicComponents"
+                (click)="currentComponent.set(comp.component)">
+          {{ comp.name }}
+        </button>
+      </div>
+
+      <div class="dynamic-output">
+        <ng-container *ngIf="currentComponent()"
+                      [ngComponentOutlet]="currentComponent()">
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+</div>

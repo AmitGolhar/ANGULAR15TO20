@@ -1,0 +1,61 @@
+.responsive-layout-demo {
+  padding: 1.5rem;
+
+  .demo-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+
+    h2 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .demo-section {
+    margin-bottom: 2rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #eaeaea;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    code {
+      font-family: Consolas, Monaco, 'Courier New', monospace;
+    }
+  }
+
+  .preview {
+    margin-top: 1rem;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+
+      .box {
+        padding: 1rem;
+        background-color: #f5f5f5;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
+
+/* Utility spacing */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}

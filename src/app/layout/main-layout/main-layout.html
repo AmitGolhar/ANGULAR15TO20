@@ -1,0 +1,21 @@
+<!-- MOBILE BUTTON -->
+<button
+  class="btn btn-dark d-lg-none m-2"
+  (click)="mobileOpen = true">
+  ☰ MENU
+</button>
+
+<div class="layout-wrapper">
+
+  <!-- SIDEBAR -->
+  <app-sidebar 
+    [open]="mobileOpen"
+    (closeSidebar)="mobileOpen = false">
+  </app-sidebar>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

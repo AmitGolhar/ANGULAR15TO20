@@ -1,0 +1,28 @@
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  app-sidebar {
+    width: 260px;
+    display: block;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  app-sidebar {
+    display: block;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

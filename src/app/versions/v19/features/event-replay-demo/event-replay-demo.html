@@ -1,0 +1,24 @@
+<div class="event-replay-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Event Replay Example</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <input [(ngModel)]="message" placeholder="Type a message" />
+      <button (click)="logEvent()">Log Event</button>
+
+      <ul>
+        <li *ngFor="let log of eventLog">{{ log }}</li>
+      </ul>
+    </div>
+  </section>
+
+</div>

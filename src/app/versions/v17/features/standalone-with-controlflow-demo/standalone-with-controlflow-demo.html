@@ -1,0 +1,35 @@
+<div class="standalone-controlflow-demo page">
+
+  <header class="demo-header mb-4">
+    <h2>{{ theory.title }}</h2>
+  </header>
+
+  <section class="demo-section mb-4" [innerHTML]="theory.content"></section>
+
+  <section class="demo-section mb-4">
+    <h3>Control Flow in Standalone Component</h3>
+
+    <pre><code>{{ codeExample }}</code></pre>
+
+    <div class="preview">
+      <div *ngIf="isVisible">
+        <ul>
+          <li *ngFor="let item of items">{{ item }}</li>
+        </ul>
+
+        <div [ngSwitch]="selectedOption">
+          <p *ngSwitchCase="'dashboard'">Dashboard View</p>
+          <p *ngSwitchCase="'settings'">Settings View</p>
+          <p *ngSwitchDefault>Other View</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button (click)="isVisible = !isVisible">Toggle Visibility</button>
+        <button (click)="selectedOption = 'dashboard'">Dashboard</button>
+        <button (click)="selectedOption = 'settings'">Settings</button>
+      </div>
+    </div>
+  </section>
+
+</div>
